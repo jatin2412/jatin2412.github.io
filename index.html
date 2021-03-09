@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./StyleSheet.css">
+    <title>Jatin Manchanda</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="nav-wrapper">
+
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link ">
+                    <!-- two classes given above to one div -->
+                     <a href="./index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                     <a href="./about.html">About</a>
+                </div>
+            </div> 
+
+            <div class="right-side">
+                <div class="brand">
+                     <div>JATIN MANCHANDA</div>
+                </div>
+
+            </div>
+         </div>
+         
+         <div class="content-wrapper">
+             <div class="portfolio-items-wrapper">
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(/Images/IMG_4591.JPG)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="/Images/IMG_4663.JPG">
+                        </div>
+                        <div class="subtitle">
+                            Website Development Project.
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(/Images/IMG_4593.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="/Images/IMG_4664.JPG">
+                        </div>
+                        <div class="subtitle">
+                            Android Development project
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(/Images/IMG_4594.JPG)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="/Images/IMG_4666.JPG">
+                        </div>
+                        <div class="subtitle">
+                            ML AI Project.
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(/Images/IMG_4592.JPG)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="/Images/IMG_4668.JPG">
+                        </div>
+                        <div class="subtitle">
+                            Data structures and algorithms implemented.
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(/Images/IMG_4589.JPG)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="/Images/IMG_4665.JPG">
+                        </div>
+                        <div class="subtitle">
+                            Designing project1
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image:url(/Images/IMG_4589.JPG)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="/Images/IMG_4662.JPG">
+                        </div>
+                        <div class="subtitle">
+                            Designing projects2
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+
+    </div>
+</body>
+<!-- we put JS code after our main body because we do not want the script to run -->
+<!-- before all other elements in that page are loaded -->
+<script>
+    // to use JS select all the elements with .pportfolio-item-wrapper class using the 
+    // console in your browser using 
+    // const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+    portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover',() => {
+          //  console.log(portfolioItem);   gives out the items we are hovering on
+          portfolioItem.childNodes[1].classList.add('img-darken')
+        })
+        portfolioItem.addEventListener('mouseout',() => {
+          portfolioItem.childNodes[1].classList.remove('img-darken')
+        })
+    })
+</script>
+</html>
